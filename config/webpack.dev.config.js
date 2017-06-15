@@ -18,8 +18,7 @@ module.exports = {
     // where webpack strats executing
     // split two separate bundles - app code and vendor code
     entry: {
-        app: './bootstrap.js',
-        vendor: ['lodash', 'react', 'react-dom']
+        app: './bootstrap.js'
     },
 
     // where the output files are generated
@@ -29,9 +28,26 @@ module.exports = {
 
         // target directory for all output files
         path: buildPath,
-        
+
         // the url to the output directory resolved relative to the html page 
         publicPath: '/'
+    },
+
+    // modules configuration
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env'],
+                        plugins: ["react-hot-loader/babel"]
+                    }
+                }
+            }
+        ]
     },
     
     plugins: [
@@ -50,9 +66,14 @@ module.exports = {
         }),
         
         // creates separate chunk, consisting of common modules shared between multiple entry points
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.js'
-        })
-    ]
+     
+        new webpack.HotModuleReplacementPlugin()
+    ],
+
+    devServer: {
+        contentBase: srcPath,
+        historyApiFallback: true,
+        inline: true,
+        port: 3000
+    }
 };

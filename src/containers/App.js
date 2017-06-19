@@ -1,9 +1,12 @@
 import React from 'react';
+import styles from './app.css';
 
 const App = ({ children }) => {
     return (
         <div>
-            { children }
+            <div className={styles.test}>Header</div>
+            <div>Content</div>
+            <div>Footer</div>
         </div>
     );
 }

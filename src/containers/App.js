@@ -1,5 +1,5 @@
 import React from 'react';
-import { testModuleRouting } from '../../modules/test-module';
+import { testModuleRouting } from '../../modules/accounts';
 import styles from './app.css';
 
 const App = ({ children }) => {

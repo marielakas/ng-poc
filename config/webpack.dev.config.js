@@ -7,6 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const rootPath = path.resolve(path.join(__dirname, '..'));
 const buildPath = path.join(rootPath, 'build');
 const srcPath = path.join(rootPath, 'src');
+const modulesPath = path.join(rootPath, 'modules');
 
 module.exports = {
     // home directory for webpack

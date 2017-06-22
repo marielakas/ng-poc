@@ -1,6 +1,6 @@
-import testModuleRouting from './routes.js';
+import accounts from './routes.js';
 
 // export routing and containers???
 export {
-    testModuleRouting
+    accounts
 }

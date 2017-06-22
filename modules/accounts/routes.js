@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Accounts from './ui/containers/Accounts';
+import { api, accountsRoutes } from './ui/containers/Accounts';
 
-const testModuleRouting = () => (
+const accounts = () => (
      <Switch>
-        <Route exact path='/accounts' component={Accounts} />
+        { accountsRoutes() }
     </Switch>
 );
 
-export default testModuleRouting;
+export default accounts;

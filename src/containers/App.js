@@ -1,12 +1,11 @@
 import React from 'react';
-import { testModuleRouting } from '../../modules/accounts';
-import styles from './app.css';
+import { accounts } from '../../modules/accounts';
 
 const App = ({ children }) => {
     return (
         <div>
             <div>Header</div>
-               { testModuleRouting() }
+               { accounts() }
             <div>Footer</div>
         </div>
     );

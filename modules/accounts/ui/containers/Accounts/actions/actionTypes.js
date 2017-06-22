@@ -1,0 +1,1 @@
+export const GET_ACCOUNTS = Symbol('GET_ACCOUNTS');

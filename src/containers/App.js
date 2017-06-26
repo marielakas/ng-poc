@@ -1,11 +1,11 @@
 import React from 'react';
-import { accounts } from '../../modules/accounts';
+import { accountsRoutes } from '../../modules/accounts/ui';
 
 const App = ({ children }) => {
     return (
         <div>
             <div>Header</div>
-               { accounts() }
+               { accountsRoutes() }
             <div>Footer</div>
         </div>
     );

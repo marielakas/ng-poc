@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 
-const configureStore = ({ appReducer, middlewares = [] }) => {
-    return createStore(appReducer, applyMiddleware(...middlewares));
+const configureStore = ({ reducer, middlewares = [] }) => {
+    return createStore(reducer, applyMiddleware(...middlewares));
 }
 
 export default configureStore;

@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import createApp from './router';
 import configureStore  from './store';
-import appReducer from './appReducer';
+import reducer from './reducer';
 
 const history = createBrowserHistory();
-const store = configureStore({ appReducer });
+const store = configureStore({ reducer });
 
 render(createApp({ store, history }), document.getElementById('app'));

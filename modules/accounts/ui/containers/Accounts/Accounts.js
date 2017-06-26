@@ -12,7 +12,6 @@ class Accounts extends Component {
 }
 
 export default connect(({ accounts }) => {
-    debugger;
     return {
         accounts: accounts.get('accounts')
     }

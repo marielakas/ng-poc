@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable';
 
-export fromJS({
+export default fromJS({
     accounts: []
 });

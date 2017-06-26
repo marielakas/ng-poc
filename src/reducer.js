@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
+import { accountsReducer } from '../modules/accounts/ui';
 
-const test = (state = {}, action) => {
-    return state;
-}
-
-const reducer = combineReducers({ test });
+const reducer = combineReducers({
+    ...accountsReducer
+});
 
 export default reducer;

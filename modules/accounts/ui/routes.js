@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { api, accountsRoutes } from './containers/Accounts';
+import { accountsRoutes } from './containers/Accounts';
 
 const accounts = () => (
      <Switch>

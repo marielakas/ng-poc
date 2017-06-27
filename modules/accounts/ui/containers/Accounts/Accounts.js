@@ -13,6 +13,6 @@ class Accounts extends Component {
 
 export default connect(({ accounts }) => {
     return {
-        accounts: accounts.get('accounts')
+        accounts: accounts.get('accountsList')
     }
 })(Accounts);

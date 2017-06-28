@@ -9,6 +9,7 @@ const buildPath = path.join(rootPath, 'build');
 const srcPath = path.join(rootPath, 'src');
 const modulesPath = path.join(rootPath, 'modules');
 const uiLibPath = path.join(modulesPath, 'core', 'lib');
+const app = path.join(srcPath, 'ui', 'bootstrap.js');
 
 module.exports = {
     // home directory for webpack
@@ -20,7 +21,7 @@ module.exports = {
     // where webpack strats executing
     // split two separate bundles - app code and vendor code
     entry: {
-        app: './bootstrap.js'
+        app
     },
 
     // where the output files are generated

@@ -5,8 +5,9 @@ import { usersReducer } from 'modules/users/ui';
 
 const reducer = combineReducers({
     ...accountsReducer,
-    accounts,
+    // accounts,
     ...usersReducer
 });
+
 
 export default reducer;

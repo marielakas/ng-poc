@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { accountsRoutes } from './containers/Accounts';
 
-const accounts = () => (
+const accounts = ({ accounts }) => (
      <Switch>
-        { accountsRoutes() }
+        { accountsRoutes(accounts) }
     </Switch>
 );
 

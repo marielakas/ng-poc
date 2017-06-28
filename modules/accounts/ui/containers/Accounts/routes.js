@@ -1,10 +1,9 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import Route from 'lib/components/Route';
 import Accounts from './Accounts';
 
-// pass path from above?
-const accountsRoutes = () => (
-    <Route exact path='/accounts' component={Accounts} />
+const accountsRoutes = (props) => (
+    <Route exact path='/accounts' component={Accounts} {...props} />
 );
 
 export default accountsRoutes;

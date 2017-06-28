@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 class Accounts extends Component {
     render() {
+        const { text } = this.props;
+
         return(
             <div>
-                Accounts connected to Redux
+                { text }
             </div>
         )
     }
+}
+
+Accounts.propTypes = {
+    text: PropTypes.string
+};
+
+Accounts.defaultProps = {
+    text: 'Default accounts'
 }
 
 export default connect(({ accounts }) => {

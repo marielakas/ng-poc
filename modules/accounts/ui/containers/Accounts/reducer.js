@@ -11,3 +11,5 @@ const accounts = (state = defaultState, action) => {
 };
 
 export default accounts;
+
+// add selectors

@@ -4,7 +4,7 @@ import { accounts } from '../modules/accounts/ui/containers/Accounts';
 import { usersReducer } from '../modules/users/ui';
 
 const reducer = combineReducers({
-    // ...accountsReducer,
+    ...accountsReducer,
     accounts,
     ...usersReducer
 });

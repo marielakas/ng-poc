@@ -8,6 +8,7 @@ const rootPath = path.resolve(path.join(__dirname, '..'));
 const buildPath = path.join(rootPath, 'build');
 const srcPath = path.join(rootPath, 'src');
 const modulesPath = path.join(rootPath, 'modules');
+const uiLibPath = path.join(modulesPath, 'core', 'lib');
 
 module.exports = {
     // home directory for webpack
@@ -32,6 +33,13 @@ module.exports = {
 
         // the url to the output directory resolved relative to the html page 
         publicPath: '/'
+    },
+
+    resolve: {
+        alias: {
+            modules: modulesPath,
+            lib: uiLibPath
+        }
     },
 
     // modules configuration

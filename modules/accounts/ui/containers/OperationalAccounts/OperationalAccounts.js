@@ -8,7 +8,8 @@ const OperationalAccounts = connect(({ operationalAccounts }, props) => {
     return {
         data: operationalAccounts.get('accounts').toJS(),
         header,
-        keyProp
+        keyProp,
+        toolbox: 'Toolbox'
     }
 })(Grid);
 

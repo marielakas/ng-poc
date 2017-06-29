@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router-dom';
-import App from './containers/App';
+import App from './App';
 
 const createApp = ({ store, history }) => {
     return (

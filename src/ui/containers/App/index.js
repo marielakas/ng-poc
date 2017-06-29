@@ -1,6 +1,6 @@
 import React from 'react';
-import { accountsRoutes } from 'modules/accounts/ui';
-import { usersRoutes } from 'modules/users/ui';
+import { accountsRoutes } from 'modules/accounts';
+import { usersRoutes } from 'modules/users';
 import Header from 'lib/components/Header';
 import { accountsConfig } from '../../config';
 

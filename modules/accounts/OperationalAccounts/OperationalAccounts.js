@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Grid from 'lib/components/Grid';
 
 const OperationalAccounts = connect(({ operationalAccounts }, props) => {
-    const { header, keyProp } = props;
+    const { header, keyProp, hidden } = props;
 
     return {
         data: operationalAccounts.get('accounts').toJS(),
@@ -15,7 +15,8 @@ const OperationalAccounts = connect(({ operationalAccounts }, props) => {
 
 OperationalAccounts.defaultProps = {
     header: 'Operational accounts',
-    keyProp: 'accountName'
+    keyProp: 'accountName',
+    hidden: true
 };
 
 export default OperationalAccounts;

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import { accountsReducer } from 'modules/accounts/ui';
-import { accounts } from 'modules/accounts/ui/containers/Accounts';
-import { usersReducer } from 'modules/users/ui';
+import { accountsReducer } from 'modules/accounts';
+import { accounts } from 'modules/accounts/Accounts';
+import { usersReducer } from 'modules/users';
 
 const reducer = combineReducers({
     ...accountsReducer,

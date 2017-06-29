@@ -13,8 +13,8 @@ const Accounts = connect(({ accounts }, props) => {
 })(Grid);
 
 Accounts.defaultProps = {
-    text: 'Default accounts',
-    keyProp: 'accountName'
+    keyProp: 'accountName',
+    header: 'Individual Acc'
 };
 
 Accounts.propTypes = {

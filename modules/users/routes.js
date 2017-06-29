@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { usersRoutes } from './containers/Users';
+import { Switch } from 'react-router-dom';
+import { usersRoutes } from './Users';
 
 const users = () => (
      <Switch>

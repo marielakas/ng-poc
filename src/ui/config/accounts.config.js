@@ -1,8 +1,9 @@
 export default {
     accounts: {
-        text: 'Implementation Accounts'
+        //header: 'Implementation Accounts!!!!!!'
     },
     operationalAccounts: {
-        // header: 'Implementation operational accounts'
+        header: 'Implementation operational accounts',
+        hidden: true
     }
 }

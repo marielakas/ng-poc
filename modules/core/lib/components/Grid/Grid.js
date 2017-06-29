@@ -20,12 +20,12 @@ export default class Grid extends Component {
     }
 
     render() {
-        const { className, data, header, headerClass, toolbox } = this.props;
+        const { className, data, header, headerClass, toolbox, hidden } = this.props;
 
         return (
             <div className={classnames(className, styles.gridContainer)}>
                 { header && <div className={classnames(headerClass, styles.gridHeader)}>{ header }</div> }
-                { toolbox && <div className={classnames(headerClass, styles.gridToolbox)}>Toolbox</div> }
+                { toolbox && !hidden && <div className={classnames(headerClass, styles.gridToolbox)}>{toolbox}</div> }
                 <div>{ this.data }</div>
             </div>
         );

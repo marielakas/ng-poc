@@ -21,6 +21,7 @@ module.exports = {
     // where webpack strats executing
     // split two separate bundles - app code and vendor code
     entry: {
+        vendor: ["react", "react-dom", "immutable", "lodash"],
         app
     },
 
@@ -93,7 +94,12 @@ module.exports = {
         }),
         
         // creates separate chunk, consisting of common modules shared between multiple entry points
-     
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            minChunks: Infinity
+        }),
+
+        // enables hot reload
         new webpack.HotModuleReplacementPlugin()
     ],
 

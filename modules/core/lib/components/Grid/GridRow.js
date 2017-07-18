@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.css';
 
 const GridRow = ({
@@ -11,6 +12,11 @@ const GridRow = ({
             <div className={styles.gridColumn}>Name: {value}</div>
         </div>
     );
+}
+
+GridRow.propTypes = {
+    id: PropTypes.number,
+    value: PropTypes.string
 }
 
 export default GridRow;

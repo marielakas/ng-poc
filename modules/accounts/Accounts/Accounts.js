@@ -1,8 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Grid from 'lib/components/Grid';
 
-const Accounts = connect(({ accounts }, props) => {
+class Accounts extends Component {
+    render() {  
+        const { data } = this.props;
+
+        return (
+            <Grid 
+                data={data}
+                keyProp='accountName'
+                header='Individual accounts' />
+        )
+    }
+}
+
+export default connect(({ accounts }, props) => {
     const { keyProp, header } = props;
 
     return {
@@ -10,7 +24,7 @@ const Accounts = connect(({ accounts }, props) => {
         keyProp,
         header
     }
-})(Grid);
+})(Accounts);
 
 Accounts.defaultProps = {
     keyProp: 'accountName',
@@ -20,5 +34,3 @@ Accounts.defaultProps = {
 Accounts.propTypes = {
     text: PropTypes.string
 };
-
-export default Accounts;

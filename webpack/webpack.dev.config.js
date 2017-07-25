@@ -8,7 +8,7 @@ const rootPath = path.resolve(path.join(__dirname, '..'));
 const buildPath = path.join(rootPath, 'build');
 const srcPath = path.join(rootPath, 'src');
 const modulesPath = path.join(rootPath, 'modules');
-const uiLibPath = path.join(modulesPath, 'core', 'lib');
+const uiLibPath = path.join(modulesPath, 'core');
 const app = path.join(srcPath, 'ui', 'bootstrap.js');
 
 module.exports = {
@@ -53,8 +53,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['es2015', 'react'],
-                        plugins: ["react-hot-loader/babel", "transform-object-rest-spread"],
                         cacheDirectory: true
                     }
                 }

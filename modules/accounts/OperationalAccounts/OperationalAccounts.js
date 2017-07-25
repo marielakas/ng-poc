@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Grid from 'lib/components/Grid';
+import Grid from 'lib/Grid';
 
 const OperationalAccounts = connect(({ operationalAccounts }, props) => {
     const { header, keyProp, hidden } = props;

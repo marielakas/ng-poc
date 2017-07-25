@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Grid from 'lib/components/Grid';
+import Grid from 'lib/Grid';
 
 class Accounts extends Component {
     render() {  

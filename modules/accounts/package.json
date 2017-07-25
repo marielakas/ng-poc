@@ -1,0 +1,19 @@
+{
+  "name": "accounts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/(node_modules)/"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}

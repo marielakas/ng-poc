@@ -22,7 +22,7 @@ module.exports = {
     // split two separate bundles - app code and vendor code
     entry: {
         vendor: ["react", "react-dom", "immutable", "lodash"],
-        app
+        app: ['babel-polyfill', app]
     },
 
     // where the output files are generated
